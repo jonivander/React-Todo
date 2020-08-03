@@ -87,6 +87,7 @@ class App extends React.Component {
         <TodoList
           toggleItem={this.toggleItem}
           tasks={this.state.tasks}
+          clearCompleted={this.clearCompleted}
         />
       </div>
     );
