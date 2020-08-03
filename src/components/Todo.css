@@ -3,6 +3,11 @@
 }
 
 .btn {
-    margin: 2vh;
-    
+    margin: 1vh;
+}
+
+.form, .header, .todo-list{
+    text-align: center;
+    width: 50%;
+    margin: auto; 
 }

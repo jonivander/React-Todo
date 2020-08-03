@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'reactstrap';
+import { Button, Form, FormGroup, Input } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css'; 
 
 class TodoForm extends React.Component {
@@ -26,15 +26,18 @@ class TodoForm extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <input
+            <Form className='form' onSubmit={this.handleSubmit}>
+                <FormGroup>
+                <Input
                     type="text"
                     name="item"
+                    placeholder="What do you need to do?"
                     value={this.state.itemText}
                     onChange={this.handleChanges}
                 />
                 <Button className='btn' color='secondary' >Add to List</Button>
-            </form>
+                </FormGroup>
+            </Form>
         );
     }
 
