@@ -1,4 +1,6 @@
 import React from 'react';
+import { Button } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.css'; 
 
 class TodoForm extends React.Component {
     constructor() {
@@ -31,7 +33,7 @@ class TodoForm extends React.Component {
                     value={this.state.itemText}
                     onChange={this.handleChanges}
                 />
-                <button>Add to List</button>
+                <Button className='btn' color='secondary' >Add to List</Button>
             </form>
         );
     }

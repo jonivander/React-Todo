@@ -1,4 +1,6 @@
 import React from 'react';
+import { Button } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.css'; 
 
 import Item from './Todo'; 
 
@@ -8,9 +10,9 @@ const TodoList = props => {
             {props.tasks.map(item => (
                 <Item key={item.id} item={item} toggleItem={props.toggleItem} /> 
             ))}
-            <button className='clear-btn' onClick={props.clearCompleted}>
+        <Button color='info' className='btn' onClick={props.clearCompleted}>
                 Clear Completed Items
-            </button>
+            </Button>
         </div>
     );
 };

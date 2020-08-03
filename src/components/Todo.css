@@ -1,3 +1,8 @@
 .completed {
     text-decoration: line-through;
 }
+
+.btn {
+    margin: 2vh;
+    
+}
