@@ -4,7 +4,18 @@ import TodoForm from './components/TodoForm';
 
 
 
-const tasks = [];
+const tasks = [
+  {
+    task: 'Organize Garage',
+    id: 1528817077286,
+    completed: false
+  },
+  {
+    task: 'Bake Cookies',
+    id: 1528817084358,
+    completed: false
+  }
+];
 
 class App extends React.Component {
   // you will need a place to store your state in this component.
@@ -44,6 +55,27 @@ class App extends React.Component {
       tasks: [...this.state.tasks, newItem]
     });
   };
+
+
+  checkTask= (itemId) => {
+    this.setState({
+      tasks: this.state.tasks.map(item => {
+        if(item.id === itemId){
+          return{
+            ...item, 
+            completed: !item.completed
+          }
+        }
+        return item
+      })
+    });
+  }; 
+
+  clearCompleted = e => {
+    e.preventDefault();
+    this.setState({ tasks: this.state.tasks.filter
+    (task => !task.completed)});
+  }
 
   render() {
     return (
